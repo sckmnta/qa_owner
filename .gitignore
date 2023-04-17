@@ -4,3 +4,4 @@
 1.log
 *.log
 *.class
+/gradle/

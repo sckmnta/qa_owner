@@ -12,7 +12,7 @@ public class WebDriverProvider implements Supplier<WebDriver> {
     private final WebDriverConfig config;
 
 
-    public WebDriverProvider(final WebDriverConfig config) {
+    public WebDriverProvider() {
         this.config = new WebDriverConfig();
     }
 
@@ -34,7 +34,7 @@ public class WebDriverProvider implements Supplier<WebDriver> {
                 return new FirefoxDriver();
             }
             default: {
-                throw new RuntimeException("No such driver!")
+                throw new RuntimeException("No such driver!");
             }
 
         }
