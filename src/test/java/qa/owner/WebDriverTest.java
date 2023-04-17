@@ -19,7 +19,7 @@ public class WebDriverTest {
     @Test
     public void testGitHub() {
         String title = driver.getTitle();
-        assertEquals(title, "GitHub: Let’s build from here · GitHub"); // error: unmappable character (0x92) for encoding UTF-8
+        assertEquals(title, "GitHub: Let’s build from here · GitHub");
 
     }
     @AfterEach

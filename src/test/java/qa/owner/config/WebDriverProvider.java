@@ -9,11 +9,11 @@ import java.util.function.Supplier;
 
 public class WebDriverProvider implements Supplier<WebDriver> {
 
-    private final WebDriverConfig config;
+    private final WebDriverConfigOld config;
 
 
     public WebDriverProvider() {
-        this.config = new WebDriverConfig();
+        this.config = new WebDriverConfigOld();
     }
 
     @Override
