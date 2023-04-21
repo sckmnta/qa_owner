@@ -4,6 +4,7 @@ import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.Test;
 import qa.owner.config.Browser;
 import qa.owner.config.TypeConfig;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class TypeTest {
@@ -35,7 +36,8 @@ public class TypeTest {
         TypeConfig config = ConfigFactory.create(TypeConfig.class, System.getProperties());
         assertThat(config.getEnum()).isEqualTo(Browser.FIREFOX);
     }
-@Test
+
+    @Test
     public void testFile() {
         System.setProperty("file", "exmpl.jpg");
         TypeConfig config = ConfigFactory.create(TypeConfig.class, System.getProperties());

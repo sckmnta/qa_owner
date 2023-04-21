@@ -12,7 +12,7 @@ public class WebDriverTest {
     private WebDriver driver;
 
     @BeforeEach
-    public void startDriver(){
+    public void startDriver() {
         driver = new WebDriverProvider().get();
     }
 
@@ -22,8 +22,9 @@ public class WebDriverTest {
         assertEquals(title, "GitHub: Let’s build from here · GitHub");
 
     }
+
     @AfterEach
-    public void closeDriver(){
+    public void closeDriver() {
         driver.close();
     }
 

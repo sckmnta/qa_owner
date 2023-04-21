@@ -10,8 +10,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class FruitsTest {
 
     @Test
-    public void testArray(){
-        System.setProperty("array","strawberry,apple");
+    public void testArray() {
+        System.setProperty("array", "strawberry,apple");
 
         FruitsConfig config = ConfigFactory.create(FruitsConfig.class, System.getProperties());
 
@@ -20,7 +20,7 @@ public class FruitsTest {
     }
 
     @Test
-    public void testList(){
+    public void testList() {
         System.setProperty("list", "strawberry,apple,orange");
 
         FruitsConfig config = ConfigFactory.create(FruitsConfig.class, System.getProperties());

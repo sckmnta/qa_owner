@@ -34,6 +34,4 @@ public interface TypeConfig extends Config {
     Path getPath(); //todo
 
 
-
-
 }

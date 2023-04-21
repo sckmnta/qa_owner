@@ -5,23 +5,25 @@ import java.net.URL;
 import java.util.Objects;
 
 public class WebDriverConfigOld {
-    public String getBaseUrl(){
+    public String getBaseUrl() {
         String baseUrl = System.getProperty("baseUrl");
-        if (Objects.isNull(baseUrl)){
+        if (Objects.isNull(baseUrl)) {
             baseUrl = "https://github.com";
         }
         return baseUrl;
     }
-    public Browser getBrowser(){
+
+    public Browser getBrowser() {
         String browser = System.getProperty("browser");
-        if (Objects.isNull(browser)){
+        if (Objects.isNull(browser)) {
             browser = "CHROME";
         }
         return Browser.valueOf(browser);
     }
-    public URL getRemoteUrl(){
+
+    public URL getRemoteUrl() {
         String remoteUrl = System.getProperty("browser");
-        if (Objects.isNull(remoteUrl)){
+        if (Objects.isNull(remoteUrl)) {
             remoteUrl = "http://localhost:4444";
         }
         try {
