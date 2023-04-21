@@ -10,7 +10,7 @@ public interface FruitsConfig extends Config {
     String[] getFruitsArray();
 
     @Key("list")
-    List<String> getFruitsList(); //todo проверить комбинации и возвращаемый лист
+    List<String> getFruitsList(); //todo check combinations and returning list
 
     @Key("array-with-default-values")
     @DefaultValue("strawberry,apple")
