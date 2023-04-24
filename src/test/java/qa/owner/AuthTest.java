@@ -15,20 +15,21 @@ public class AuthTest {
 
     @Test
 
-    public void authClasspath(){
+    public void authClasspath() {
 
-        SecretConfig config = ConfigFactory.create(SecretConfig.class,System.getProperties());
+        SecretConfig config = ConfigFactory.create(SecretConfig.class, System.getProperties());
         assertThat(config.username()).isEqualTo("autotest");
         assertThat(config.password()).isEqualTo("autotest");
 
     }
+
     @Test
 
     public void authWithSecretFile() throws Exception {
         String content = "username=secret-user\npassword=secret-pass";
         Path secret = Paths.get("/secret.properties");
         Files.write(secret, content.getBytes(StandardCharsets.UTF_8));
-        SecretConfig config = ConfigFactory.create(SecretConfig.class,System.getProperties());
+        SecretConfig config = ConfigFactory.create(SecretConfig.class, System.getProperties());
         assertThat(config.username()).isEqualTo("secret-user");
         assertThat(config.password()).isEqualTo("secret-pass");
         Files.delete(secret);
